@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        border: 1px solid red;
+        text-decoration: underline;
+    }
+    img{
+        /*行内元素是基线对齐 所以会出现缝隙 去除缝隙可设置垂直对齐方式为top或者bottom
+          或者设置display为block(转换成块级元素)
+        */
+        /* vertical-align: bottom; */
+        display: block;
+    }
+</style>
+<body>
+    <div><img src="images/tb.jpg" alt="">测试图片缝隙</div>
+</body>
+</html>

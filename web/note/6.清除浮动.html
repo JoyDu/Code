@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+     /* 方法2：在浮动元素的父元素上加overflow:hidden; */
+    .father{
+        width: 600px;
+        border: 1px solid red;
+        /*方法2. overflow: hidden;         */
+    }
+    .big{
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+        float: left;
+    }
+    .small{
+        width: 80px;
+        height: 80px;
+        background-color: blue;
+        float: left;
+    }
+    
+    .botome{
+        width: 600px;
+        height: 30px;
+        background-color: #ccc;
+    }
+    /* 方法3：伪元素清除浮动 */
+    /* .clearfix:after{
+        content: "";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+    .clearfix{
+        *zoom: 1; ie7以下清除浮动
+    } 
+    */
+
+    /* 方法1：在最后一个浮动节点后加一个空div通过样式clear:both清除对其他元素的影响
+     .cleanfloat{
+        clear:both;
+    }  */
+
+    
+    
+    
+    /* 方法4：双伪元素清除浮动 */
+    .clearfix:before,.clearfix:after{
+        content: '';
+        display: table;
+    }
+    .clearfix:after{
+        clear: both;
+    }
+    .clearfix{
+        *zoom: 1;
+    }
+    </style>
+</head>
+<body>
+    <div class="father clearfix">
+        <div class="big"></div>
+        <div class="small"></div>
+        <div class="cleanfloat"></div>
+    </div>
+    <div class="botome">
+
+    </div>
+</body>
+</html>

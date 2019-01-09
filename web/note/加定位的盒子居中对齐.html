@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .box{
+        width: 300px;
+        height: 300px;
+        margin: 200px auto;
+        background-color: pink;
+        position:absolute;
+        /* left父盒子的50%，向左移动浮动盒子宽度的一半，刚好居中 */
+        left: 50%;
+        margin-left: -150px;
+    }
+    </style>
+</head>
+<body>
+    <p>加绝对定位和加浮动的盒子margin auto 会失效</p>
+    <div class="box">
+
+    </div>
+</body>
+</html>

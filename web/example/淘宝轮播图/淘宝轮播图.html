@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .main{
+        width: 520px;
+        height: 280px;
+        margin: 200px auto;
+        position: relative;
+    }
+    li{
+        list-style: none;
+    }
+    .main a {
+        width: 24px;
+        height: 36px;
+        display: block;
+        position: absolute;
+        top:50%;
+        margin-top: -18px;
+    }
+    .left{
+        left: 0;
+        background: url("./images/left.png") no-repeat;
+    }
+    .right{
+        right: 0;
+        background: url("./images/right.png") no-repeat;
+    }
+    .main ul{
+        width: 70px;
+        height: 13px;
+        position: absolute;
+        bottom: 12px;
+        left:50%;
+        margin-left: -35px;
+        border-radius: 6px;
+        background-color: rgba(255,255,255,.3);
+    }
+    .main ul li{
+        float: left;
+        width: 10px;
+        height: 10px;
+        background-color: #fff;
+        margin: 2px;
+        border-radius: 50%;
+    }
+    .main .firstradius{
+        background-color: #f40;
+    }
+
+</style>
+<body>
+    <div class="main">
+        <img src="images/tb.jpg" alt="">
+        <a href="#" class="left"></a>
+        <a href="#" class="right"></a>
+        <ul>
+            <li class="firstradius"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+</html>
