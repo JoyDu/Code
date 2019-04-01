@@ -21,7 +21,7 @@ vscode开发.netcore常用命令
 
 ASP.NET Core 项目配置 ( Startup )
 ---
-1.Startup类必须是公开的，并且包含以下两个方法</br>
+Startup类必须是公开的，并且包含以下两个方法</br>
     
     public Class Startup{
         //用于定义应用程序需要的服务，例如ASP.NET Core MVC EF Core和Identity等
@@ -41,6 +41,13 @@ ASP.NET Core 项目配置 ( Startup )
         });
     }
 
+ASP.NET Core中间件
+---
+<p>一种装配到应用程序管道以处理请求和响应的组件</p>
+<p>每个组件：</p>
+<p>1.可以选择是否将请求传递到管道中的下一个组件。</br>
+2.可在调用管道中的下一个组件前后执行工作。</p>
 
+    
 
 
