@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
+using Microsoft.AspNetCore.Diagnostics;
 
 namespace test
 {
@@ -29,15 +30,17 @@ namespace test
         {
             if (env.IsDevelopment())
             {
+                app.UseDefaultFiles();
                 app.UseDeveloperExceptionPage();
             }
-
-            app.Run(async (context) =>
-            {
-                var msg=Configuration["message"];
-                context.Response.ContentType = "text/plain;charset=utf-8";
-                await context.Response.WriteAsync(msg);
-            });
+            app.UseStaticFiles();
+            // app.Run(async (context) =>
+            // {
+            //     var msg=Configuration["message"];
+            //     //设置响应类型
+            //     context.Response.ContentType = "text/plain;charset=utf-8";
+            //     await context.Response.WriteAsync(msg);
+            // });
         }
     }
 }

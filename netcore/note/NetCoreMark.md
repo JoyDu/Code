@@ -45,9 +45,100 @@ ASP.NET Core中间件
 ---
 <p>一种装配到应用程序管道以处理请求和响应的组件</p>
 <p>每个组件：</p>
-<p>1.可以选择是否将请求传递到管道中的下一个组件。</br>
-2.可在调用管道中的下一个组件前后执行工作。</p>
+<p>1.可以选择是否将请求传递到管道中的下一个组件。</p>
+<p>2.可在调用管道中的下一个组件前后执行工作。</p>
+<p><b>Microsoft.AspNetCore.Diagnostics</b> 异常处理包可以用于异常处理，异常显示页面和诊断信息的 ASP.NET Core 中间件</p>
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Threading.Tasks;
+    using Microsoft.AspNetCore.Builder;
+    using Microsoft.AspNetCore.Hosting;
+    using Microsoft.AspNetCore.Http;
+    using Microsoft.Extensions.DependencyInjection;
+    using Microsoft.Extensions.Configuration;
+    using Microsoft.AspNetCore.Diagnostics;//引用异常处理
 
-    
+    namespace test
+    {
+        public class Startup
+        {
+            public IConfiguration Configuration{get;set;}
+            public Startup()
+            {
+                var builder=new ConfigurationBuilder().AddJsonFile("AppSettings.json");
+                Configuration=builder.Build();
+            }
+            // This method gets called by the runtime. Use this method to add services to the container.
+            // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
+            public void ConfigureServices(IServiceCollection services)
+            {
+            }
 
+            // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+            {
+                if (env.IsDevelopment())
+                {
+                    app.UseDeveloperExceptionPage();
+                }
+                //使用欢迎页面
+                app.UseWelcomePage();
+                app.Run(async (context) =>
+                {
+                    var msg=Configuration["message"];
+                    //设置响应类型
+                    context.Response.ContentType = "text/plain;charset=utf-8";
+                    await context.Response.WriteAsync(msg);
+                });
+            }
+        }
+    }
+
+ASP.NET Core异常和错误处理
+---
+    public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+    {
+        //开发环境下捕获报错，会显示详细报错信息，正式环境下则隐藏了相关文件和报错明细
+        if (env.IsDevelopment())
+        {
+            app.UseDeveloperExceptionPage();
+        }
+        //使用欢迎页面
+        app.UseWelcomePage();
+        app.Run(async (context) =>
+        {
+            new Exception("Throw Exception")
+            var msg=Configuration["message"];
+            //设置响应类型
+            context.Response.ContentType = "text/plain;charset=utf-8";
+            await context.Response.WriteAsync(msg);
+        });
+    }
+
+ASP.NET Core 静态文件
+---
+<p>JavaScript 文件、图像图形、CSS 样式表文件等,一般存放在wwwroot目录下</p>
+<p>UseStaticFiles中间件机制：</p>
+<p>1.如果静态文件是一个可以使用的文件，它将返回该文件，而不会尝试调用下一个中间件</p>
+<p>2.如果它没有找到匹配的文件，那么将继续调用下一个中间件</p>
+<p>UseDefaultFiles中间件在开发环境使用，获取默认起始页，例如Index.html不区分大小写</p>
+<p><b>UseDefaultFiles中间件必须在UseStaticFiles中间件的前面</b></p>
+
+    public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+    {
+        if (env.IsDevelopment())
+        {
+            app.UseDefaultFiles();
+            app.UseDeveloperExceptionPage();
+        }
+        app.UseStaticFiles();
+        //ap.Run(async (context) =>
+        //{
+        //    var msg=Configuration["message"];
+        //    //设置响应类型
+        //    context.Response.ContentType = "text/plain;charset=utf-8";
+        //    await context.Response.WriteAsync(msg);
+        //});
+    }
 
