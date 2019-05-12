@@ -1,6 +1,17 @@
 # coding=utf-8
 import requests
-indexUrl = "http://www.ttyy11.com"
+from bs4 import BeautifulSoup
+indexUrl = "http://www.ttyy11.com/ee44/7/1.html"
+rootPath = "ttyy11/"
+
+
+def main():
+    response = requestGet(indexUrl)
+    if response is not False:
+        writeToFile(response)
+        soup = BeautifulSoup(response.text, "lxml")
+        print(soup.title)
+        #pagelist=
 
 
 def requestGet(url):
@@ -27,6 +38,10 @@ def writeToFile(response):
     if response is False:
         return False
     else:
-        with open("ttyy11.html", "wb") as file:
+        filepath = rootPath+"ttyy11.html"
+        with open(filepath, "wb") as file:
             file.write(response.content)
             file.close()
+
+
+main()

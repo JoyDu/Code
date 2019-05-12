@@ -1,0 +1,7 @@
+C:\Users\duwan\Code\c#\code\DotNet高级\委托和事件\bin\Debug\委托和事件.exe.config
+C:\Users\duwan\Code\c#\code\DotNet高级\委托和事件\bin\Debug\委托和事件.exe
+C:\Users\duwan\Code\c#\code\DotNet高级\委托和事件\bin\Debug\委托和事件.pdb
+C:\Users\duwan\Code\c#\code\DotNet高级\委托和事件\obj\Debug\委托和事件.csprojAssemblyReference.cache
+C:\Users\duwan\Code\c#\code\DotNet高级\委托和事件\obj\Debug\委托和事件.csproj.CoreCompileInputs.cache
+C:\Users\duwan\Code\c#\code\DotNet高级\委托和事件\obj\Debug\委托和事件.exe
+C:\Users\duwan\Code\c#\code\DotNet高级\委托和事件\obj\Debug\委托和事件.pdb
