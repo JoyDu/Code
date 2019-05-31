@@ -30,10 +30,16 @@ namespace test
         {
             if (env.IsDevelopment())
             {
-                app.UseDefaultFiles();
                 app.UseDeveloperExceptionPage();
+                app.useDatabaseErrorPage();
+                app.UseDefaultFiles();
+                
+            }else{
+                app.UserExceptionHandler("/Home/Error");
             }
             app.UseStaticFiles();
+            app.UseIdentity();
+            app.UseMvcWithDefaultRoute();
             // app.Run(async (context) =>
             // {
             //     var msg=Configuration["message"];

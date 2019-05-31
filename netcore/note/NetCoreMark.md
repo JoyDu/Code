@@ -141,4 +141,7 @@ ASP.NET Core 静态文件
         //    await context.Response.WriteAsync(msg);
         //});
     }
+ASP.NET Core 配置MVC
+---
+
 
