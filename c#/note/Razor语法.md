@@ -5,7 +5,6 @@ tags: Razor
 ---
 
 1.1 @符号之后的是C#代码，@{}里面可以是C#代码块，html标签会自动识别为html代码
-
     @model WebApp.Models.EmployeeModel
     @{
         ViewData["Title"] = "Index";
