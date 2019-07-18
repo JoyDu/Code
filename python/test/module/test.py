@@ -1,18 +1,16 @@
 # coding=utf-8
-# from helper import *
-import helper
-h = helper.Helper()
+import requests
 
-
-def testAdd():
-    print(h.add(12, 21))
-
-
-def testSubstract():
-    print(h.subtract(21, 12))
-
-
+response = requests.get("http://www.baidu.com")
+print('type(response):  ')
+print(type(response))
+print("status_code:    ")
+print(response.status_code)
+print("type(response.text):    ")
+print(type(response.text))
+print("response.text:    ")
+print(response.text)
+print("response.cookies:    ")
+print(response.cookies)
 if __name__ == "__main__":
-    testAdd()
-    testSubstract()
     print(__name__)

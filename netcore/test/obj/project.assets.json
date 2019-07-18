@@ -11800,11 +11800,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\duwan\\Code\\netcore\\test\\test.csproj",
+      "projectUniqueName": "C:\\Users\\duwan\\Documents\\Code\\Code\\netcore\\test\\test.csproj",
       "projectName": "test",
-      "projectPath": "C:\\Users\\duwan\\Code\\netcore\\test\\test.csproj",
+      "projectPath": "C:\\Users\\duwan\\Documents\\Code\\Code\\netcore\\test\\test.csproj",
       "packagesPath": "C:\\Users\\duwan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\duwan\\Code\\netcore\\test\\obj\\",
+      "outputPath": "C:\\Users\\duwan\\Documents\\Code\\Code\\netcore\\test\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
