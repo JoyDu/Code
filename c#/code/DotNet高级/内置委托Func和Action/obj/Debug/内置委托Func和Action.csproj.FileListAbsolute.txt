@@ -1,7 +1,0 @@
-C:\Users\duwan\Code\c#\code\DotNet高级\内置委托Func和Action\bin\Debug\内置委托Func和Action.exe.config
-C:\Users\duwan\Code\c#\code\DotNet高级\内置委托Func和Action\bin\Debug\内置委托Func和Action.exe
-C:\Users\duwan\Code\c#\code\DotNet高级\内置委托Func和Action\bin\Debug\内置委托Func和Action.pdb
-C:\Users\duwan\Code\c#\code\DotNet高级\内置委托Func和Action\obj\Debug\内置委托Func和Action.csprojAssemblyReference.cache
-C:\Users\duwan\Code\c#\code\DotNet高级\内置委托Func和Action\obj\Debug\内置委托Func和Action.csproj.CoreCompileInputs.cache
-C:\Users\duwan\Code\c#\code\DotNet高级\内置委托Func和Action\obj\Debug\内置委托Func和Action.exe
-C:\Users\duwan\Code\c#\code\DotNet高级\内置委托Func和Action\obj\Debug\内置委托Func和Action.pdb
